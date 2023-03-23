@@ -28,7 +28,6 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      //  bo goi api di a
       const res = await fetch(`${BASE_URL}/auth/register`, {
         method: "post",
         headers: {

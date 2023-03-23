@@ -3,13 +3,13 @@ import User from "../models/User.js";
 // create new User
 export const createUser = async (req, res) => {
   const newUser = new User(req.body);
-
+  // console.log(newUser);
   try {
     const savedUser = await newUser.save();
-//ok
+    //ok
     res.status(200).json({
       success: true,
-      message: "Successfully created", 
+      message: "Successfully created",
       data: savedUser,
     });
   } catch (err) {
